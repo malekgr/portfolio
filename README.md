@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Malek Garrach - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🌙 **Dark Blue Theme** - Professional and modern design
+- 🎬 **Smooth Animations** - Powered by Framer Motion
+- 📱 **Fully Responsive** - Looks great on all devices
+- ⚡ **Fast Performance** - Optimized with Next.js
+- 🚀 **GCP Ready** - Configured for Google Cloud Run deployment
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Deployment**: Google Cloud Run
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles and theme
+│   ├── layout.tsx       # Root layout with metadata
+│   └── page.tsx         # Main page component
+├── components/
+│   ├── About.tsx        # About section
+│   ├── Contact.tsx      # Contact form section
+│   ├── Experience.tsx   # Work experience timeline
+│   ├── Footer.tsx       # Footer component
+│   ├── Hero.tsx         # Hero section with profile
+│   ├── Navbar.tsx       # Navigation bar
+│   ├── Projects.tsx     # Projects showcase
+│   └── Skills.tsx       # Technical skills
+└── data/
+    └── resume.ts        # Your resume data (UPDATE THIS!)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ 
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Install dependencies:
+```bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Update your resume data**:
+   - Edit `src/data/resume.ts` with your personal information
+   - Replace placeholder text with your actual experience, skills, and projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the development server:
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment to Google Cloud Platform
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Option 1: Using Cloud Build (Recommended)
+
+1. Install and configure the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+
+2. Authenticate with GCP:
+```bash
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+```
+
+3. Enable required APIs:
+```bash
+gcloud services enable cloudbuild.googleapis.com
+gcloud services enable run.googleapis.com
+gcloud services enable containerregistry.googleapis.com
+```
+
+4. Deploy using Cloud Build:
+```bash
+gcloud builds submit --config cloudbuild.yaml
+```
+
+### Option 2: Manual Deployment
+
+1. Build and push the Docker image:
+```bash
+# Build the image
+docker build -t gcr.io/YOUR_PROJECT_ID/portfolio .
+
+# Push to Container Registry
+docker push gcr.io/YOUR_PROJECT_ID/portfolio
+```
+
+2. Deploy to Cloud Run:
+```bash
+gcloud run deploy portfolio \
+  --image gcr.io/YOUR_PROJECT_ID/portfolio \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated
+```
+
+### Option 3: Firebase Hosting (Static Export)
+
+1. Add to `next.config.ts`:
+```typescript
+output: 'export',
+```
+
+2. Build and deploy:
+```bash
+npm run build
+firebase init hosting
+firebase deploy
+```
+
+## 📝 Customization
+
+### Update Resume Data
+
+Edit `src/data/resume.ts` to add your:
+- Personal information (name, title, email, etc.)
+- Work experience
+- Education
+- Skills
+- Projects
+- Certifications
+
+### Update Profile Picture
+
+Replace `public/malekPic.jpg` with your own photo.
+
+### Update Colors
+
+Modify the CSS variables in `src/app/globals.css`:
+```css
+:root {
+  --background: #0a0e1a;
+  --primary: #3b82f6;
+  /* ... other colors */
+}
+```
+
+## 📄 License
+
+MIT License - feel free to use this template for your own portfolio!
+
+---
+
+Built with ❤️ by Malek Garrach
