@@ -134,7 +134,7 @@ function Projects() {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/malekgarrach"
+            href="https://github.com/malekgr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-blue-500/50 text-blue-400 rounded-lg hover:bg-blue-500/10 transition-all duration-300"
