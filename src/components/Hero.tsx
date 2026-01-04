@@ -40,7 +40,7 @@ const Hero = () => {
       />
 
       <div className="container mx-auto px-6 z-10">
-        <div className="flex flex-col items-center justify-center gap-8">
+        <div className="flex flex-col items-center justify-center gap-8 mt-16 sm:mt-0">
           {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -73,7 +73,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-blue-400 text-lg mb-2"
+              className="text-blue-400 text-lg mb-2 hidden sm:block"
             >
               Hello, I&apos;m
             </motion.p>
