@@ -10,10 +10,8 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden dots-pattern"
     >
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-radial pointer-events-none" />
       
-      {/* Animated circles */}
       <motion.div
         className="absolute top-20 left-10 w-72 h-72 rounded-full bg-blue-600/10 blur-3xl"
         animate={{
@@ -41,7 +39,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col items-center justify-center gap-8 mt-16 sm:mt-0">
-          {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +55,6 @@ const Hero = () => {
                 priority
               />
             </div>
-            {/* Decorative ring */}
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-blue-400/20"
               animate={{ rotate: 360 }}
@@ -67,7 +63,6 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Text Content */}
           <div className="text-center max-w-xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -105,7 +100,6 @@ const Hero = () => {
               {personalInfo.summary}
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -120,7 +114,6 @@ const Hero = () => {
               </a>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -159,7 +152,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator - hidden on mobile */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

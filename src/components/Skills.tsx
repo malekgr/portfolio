@@ -16,7 +16,6 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 relative">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +32,6 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
@@ -69,7 +67,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Animated skill bars (optional visual element) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +104,6 @@ const Skills = () => {
         </motion.div>
       </div>
 
-      {/* Decorative element */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );

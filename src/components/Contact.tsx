@@ -12,20 +12,32 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
     
-    // Simulate form submission (replace with actual form handling)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      setError("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -37,7 +49,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +67,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +82,6 @@ const Contact = () => {
             </p>
 
             <div className="space-y-6">
-              {/* Email */}
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-blue-500/50 transition-colors group"
@@ -98,7 +107,6 @@ const Contact = () => {
                 </div>
               </a>
 
-              {/* Phone */}
               <a
                 href={`tel:${personalInfo.phone}`}
                 className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-blue-500/50 transition-colors group"
@@ -124,7 +132,6 @@ const Contact = () => {
                 </div>
               </a>
 
-              {/* Location */}
               <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
                 <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
                   <svg
@@ -154,7 +161,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="mt-8">
               <p className="text-slate-400 mb-4">Follow me on</p>
               <div className="flex gap-4">
@@ -190,7 +196,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -312,12 +317,21 @@ const Contact = () => {
                   Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
+
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-center"
+                >
+                  {error}
+                </motion.div>
+              )}
             </form>
           </motion.div>
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );

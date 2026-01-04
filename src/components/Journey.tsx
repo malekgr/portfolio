@@ -27,7 +27,7 @@ const journeySteps: JourneyStep[] = [
     title: "Building Character",
     location: "Djerba, Tunisia",
     description:
-      "When I was a teenager, I started working different jobs. Not because I had to, but because I wanted to learn what it felt like to earn something on my own. I worked in shops, helped out wherever I could, and learned a lot about people and hard work. Those years taught me that nothing comes easy, and that's okay. Every small job gave me something—patience, discipline, and a sense of responsibility that stayed with me.",
+      "When I was a teenager, I started working different jobs. Not because I had to, but because I wanted to learn what it felt like to earn something on my own. I worked in shops, helped out wherever I could, and learned a lot about people and hard work. Those years taught me that nothing comes easy, and that's okay. Every small job gave me something: patience, discipline, and a sense of responsibility that stayed with me.",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const journeySteps: JourneyStep[] = [
     title: "Academic Excellence",
     location: "Djerba, Tunisia",
     description:
-      "High school was a turning point. I put in the work, stayed focused, and it paid off. I graduated with my Baccalauréat in engineering, and honestly, it felt like the first big win of my life. It wasn't just about the grades—it was about proving to myself that I could do it. That diploma opened doors I didn't even know existed, and it gave me the confidence to aim higher.",
+      "High school was a turning point. I put in the work, stayed focused, and it paid off. I graduated with my Baccalauréat in engineering, and honestly, it felt like the first big win of my life. It wasn't just about the grades, it was about proving to myself that I could do it. That diploma opened doors I didn't even know existed, and it gave me the confidence to aim higher.",
     highlight: true,
   },
   {
@@ -44,7 +44,7 @@ const journeySteps: JourneyStep[] = [
     title: "IPEIN - Preparatory Classes",
     location: "Nabeul, Tunisia",
     description:
-      "Moving to Nabeul for preparatory classes was my first time living away from home. It was tough—the classes were intense, the competition was real, and there were days I doubted myself. But I kept going. In my first year, I ranked 1st in my class, which I still can't believe. Then came the national exam, and I finished 27th out of 830 students. That moment meant everything. It showed me that hard work really does pay off.",
+      "Moving to Nabeul for preparatory classes was my first time living away from home. It was tough. The classes were intense, the competition was real, and there were days I doubted myself. But I kept going. In my first year, I ranked 1st in my class, which I still can't believe. Then came the national exam, and I finished 27th out of 830 students. That moment meant everything. It showed me that hard work really does pay off.",
     highlight: true,
   },
   {
@@ -53,7 +53,7 @@ const journeySteps: JourneyStep[] = [
     title: "SUP'COM - Engineering School",
     location: "Tunis, Tunisia",
     description:
-      "Getting into SUP'COM was a big deal. It's one of the best engineering schools in Tunisia, and being there felt like a privilege. I studied telecommunications, learned from great professors, and met some of the smartest people I know. We studied together, struggled together, and became friends for life. Those three years shaped me in ways I'm still discovering. It wasn't just about the degree—it was about growing up.",
+      "Getting into SUP'COM was a big deal. It's one of the best engineering schools in Tunisia, and being there felt like a privilege. I studied telecommunications, learned from great professors, and met some of the smartest people I know. We studied together, struggled together, and became friends for life. Those three years shaped me in ways I'm still discovering. It wasn't just about the degree, it was about growing up.",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const journeySteps: JourneyStep[] = [
     title: "First Journey to America",
     location: "United States",
     description:
-      "Going to America was something I used to dream about when I was a kid watching movies. I never thought it would actually happen. But in the summer of 2024, I got an internship opportunity in the US, and suddenly the dream became real. I landed in Michigan and couldn't believe I was there. During my time off, I visited Chicago and Detroit—cities I had only seen in pictures. Walking through downtown Chicago, seeing the skyline, standing by Lake Michigan... it was unreal. Detroit had its own vibe too, full of history and energy. Every moment felt like a gift. That summer changed how I see the world.",
+      "Going to America was something I used to dream about when I was a kid watching movies. I never thought it would actually happen. But in the summer of 2024, I got an internship opportunity in the US, and suddenly the dream became real. I landed in Michigan and couldn't believe I was there. During my time off, I visited Chicago and Detroit, cities I had only seen in pictures. Walking through downtown Chicago, seeing the skyline, standing by Lake Michigan... it was unreal. Detroit had its own vibe too, full of history and energy. Every moment felt like a gift. That summer changed how I see the world.",
     highlight: true,
   },
   {
@@ -70,7 +70,7 @@ const journeySteps: JourneyStep[] = [
     title: "Graduation & Certifications",
     location: "Tunis, Tunisia",
     description:
-      "After my time in America, I went back to Tunisia to finish what I started. I completed my studies at SUP'COM, got my TOEIC English certification, and finally graduated as a Telecommunications Engineer. It was a proud moment—for me and for my family. All those years of studying, all the late nights and early mornings, they all led to this. But I knew it wasn't the end. It was just the beginning of something bigger.",
+      "After my time in America, I went back to Tunisia to finish what I started. I completed my studies at SUP'COM, got my TOEIC English certification, and finally graduated as a Telecommunications Engineer. It was a proud moment for me and for my family. All those years of studying, all the late nights and early mornings, they all led to this. But I knew it wasn't the end. It was just the beginning of something bigger.",
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const journeySteps: JourneyStep[] = [
     title: "Master's in Computer Science",
     location: "Grand Rapids, Michigan, USA",
     description:
-      "And here I am now, in Grand Rapids, Michigan, pursuing my Master's in Computer Science at Grand Valley State University. Sometimes I still can't believe it. From a small island in Tunisia to the heart of America—it's been quite a ride. Every challenge, every setback, every small victory brought me here. I don't know exactly where this path will lead, but I'm excited to find out. This isn't the end of my story. It's just a new chapter.",
+      "And here I am now, in Grand Rapids, Michigan, pursuing my Master's in Computer Science at Grand Valley State University. Sometimes I still can't believe it. From a small island in Tunisia to the heart of America, it's been quite a ride. Every challenge, every setback, every small victory brought me here. I don't know exactly where this path will lead, but I'm excited to find out. This isn't the end of my story. It's just a new chapter.",
     highlight: true,
   },
 ];
@@ -97,7 +97,6 @@ const Journey = () => {
   return (
     <section id="journey" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,9 +110,7 @@ const Journey = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full mt-4" />
         </motion.div>
 
-        {/* Cards Display */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Card */}
           <div className="relative h-[500px] md:h-[420px] perspective-1000">
             {journeySteps.map((step, index) => {
               const isActive = index === activeIndex;
@@ -150,7 +147,6 @@ const Journey = () => {
                         : "bg-slate-800/60 border-slate-700/50 shadow-xl"
                     }`}
                   >
-                    {/* Header */}
                     <div className="flex items-center gap-4 mb-6">
                       <span
                         className={`w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl ${
@@ -166,12 +162,10 @@ const Journey = () => {
                       </h3>
                     </div>
 
-                    {/* Description */}
                     <p className="text-slate-300 text-base md:text-lg leading-relaxed">
                       {step.description}
                     </p>
 
-                    {/* Highlight indicator */}
                     {step.highlight && (
                       <div className="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
                     )}
@@ -181,7 +175,6 @@ const Journey = () => {
             })}
           </div>
 
-          {/* Navigation Buttons */}
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={prevCard}
@@ -223,7 +216,6 @@ const Journey = () => {
             </button>
           </div>
 
-          {/* Progress Dots */}
           <div className="flex justify-center mt-6 gap-2">
             {journeySteps.map((_, index) => (
               <button
@@ -240,7 +232,6 @@ const Journey = () => {
           </div>
         </div>
 
-        {/* Quote */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -260,7 +251,6 @@ const Journey = () => {
         </motion.div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
     </section>

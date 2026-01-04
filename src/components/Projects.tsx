@@ -157,7 +157,6 @@ function Projects() {
         </motion.div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { personalInfo } from "@/data/resume";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -38,7 +37,6 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Avatar with wave animation */}
           <a href="#home" className="flex items-center gap-3">
             <motion.div
               className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500/50"
@@ -62,7 +60,6 @@ const Navbar = () => {
             </motion.div>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -82,7 +79,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-slate-300 hover:text-blue-400"
@@ -112,7 +108,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}

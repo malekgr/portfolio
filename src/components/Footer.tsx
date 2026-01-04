@@ -9,19 +9,16 @@ const Footer = () => {
     <footer className="py-8 border-t border-slate-800 bg-slate-900/50">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Copyright */}
           <p className="text-slate-400 text-sm">
             © {currentYear} {personalInfo.name}. All rights reserved.
           </p>
 
-          {/* Built with */}
           <p className="text-slate-500 text-sm">
             Built with{" "}
             <span className="text-blue-400">Next.js</span> &{" "}
             <span className="text-blue-400">Tailwind CSS</span>
           </p>
 
-          {/* Social Links */}
           <div className="flex gap-4">
             <a
               href={personalInfo.linkedin}
@@ -64,7 +61,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Back to top */}
         <div className="flex justify-center mt-8">
           <a
             href="#home"

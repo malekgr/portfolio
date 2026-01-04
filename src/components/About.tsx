@@ -14,7 +14,6 @@ const About = () => {
   return (
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div {...fadeInUp} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
@@ -23,7 +22,6 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* About Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +45,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Quick Info */}
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
                 <p className="text-slate-400 text-sm mb-1">Location</p>
@@ -60,7 +57,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Education */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +76,6 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative pl-8 border-l-2 border-blue-500/30"
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-900" />
                   
                   <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700 card-hover">
@@ -96,7 +91,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Decorative element */}
       <div className="absolute top-1/2 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );

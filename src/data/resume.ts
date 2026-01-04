@@ -19,7 +19,7 @@ export const experiences = [
     title: "Research Graduate Assistant",
     company: "College of Computing - GVSU",
     location: "Grand Rapids, United States of America",
-    period: "August – Present, 2025",
+    period: "August - Present, 2025",
     description: [
       "Designed and implemented an end-to-end continuous learning architecture, including automated teacher model retraining, student model distillation, and deployment to Raspberry Pi devices for real-time plant health monitoring with robust and scalable computer vision pipelines."
     ],
@@ -29,7 +29,7 @@ export const experiences = [
     title: "Intern - Computer Vision Developer",
     company: "College of Computing - GVSU",
     location: "Grand Rapids, United States of America",
-    period: "March – July, 2025",
+    period: "March - July, 2025",
     description: [
       "Developed a computer vision classification model to assess the health status of lettuce plants, effectively distinguishing between healthy and diseased samples. Applied transfer learning and model distillation techniques to enhance performance with limited data."
     ],
@@ -70,14 +70,6 @@ export const education = [
     location: "Nabeul, Tunisia",
     period: "2020 - 2022",
     description: "Intensive 2-year program in Mathematics and Physics. Ranked 27th out of 830 students in the national competitive examination.",
-  },
-  {
-    id: 4,
-    degree: "Baccalauréat in Engineering",
-    school: "High School",
-    location: "Djerba, Tunisia",
-    period: "2019 - 2020",
-    description: "Secondary education diploma with specialization in engineering sciences.",
   },
 ];
 

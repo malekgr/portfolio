@@ -7,7 +7,6 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 relative bg-slate-900/30">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +20,6 @@ const Experience = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full" />
         </motion.div>
 
-        {/* Timeline */}
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div
@@ -32,13 +30,11 @@ const Experience = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative mb-12 last:mb-0"
             >
-              {/* Timeline line */}
               {index !== experiences.length - 1 && (
                 <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-500/0" />
               )}
 
               <div className="flex gap-6">
-                {/* Timeline dot */}
                 <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg
                     className="w-8 h-8 text-white"
@@ -55,7 +51,6 @@ const Experience = () => {
                   </svg>
                 </div>
 
-                {/* Content */}
                 <div className="flex-1 p-6 bg-slate-800/50 rounded-xl border border-slate-700 card-hover">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
@@ -92,7 +87,6 @@ const Experience = () => {
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
     </section>
